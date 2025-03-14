@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.html" method="get">
+        <label for="username">Username:</label> <br>
+        <input id="username" type="text" autofocus required minlength="5" maxlength="20"> <br> <br>
+        <label for="Email">Email:</label> <br>
+        <input type="email" id="Email" value="o@o.com" disabled> <br> <br>
+        <input id="Token" type="hidden"  value="b92f1fc2fce391ad7af633723afd3055">
+        <label>Skills:</label> <br>
+        <label >
+            <input type="checkbox" value="Problem Solving" checked name="skills">
+            Problem Solving
+        </label> <br>
+        <label >
+            <input type="checkbox" value="logical Thinking" name="skills">
+            logical Thinking
+        </label><br>
+        <label >
+            <input type="checkbox" value="Advanced Search" name="skills">
+            Advanced Search
+        </label><br>
+        <label >
+            <input type="checkbox" value="Planning" name="skills">
+            Planning
+        </label><br>
+        <label>Jobs:</label><br>
+        <label>
+            <input type="radio" value="Front-End developer" checked name="job">
+            Front-End developer
+        </label>
+        <label><br>
+            <input type="radio" value="Back-End Developer" name="job">
+            Back-End Developer
+        </label><br>
+        <label>
+            <input type="radio" value="Business Analyst" name="job">
+            Business Analyst
+        </label><br>
+        <label>
+            <input type="radio" value="Project Manager" name="job">
+            Project Manager
+        </label> <br>
+        <label>
+            <input type="radio" value="Scrum Master" name="job">
+            Scrum Master
+        </label> <br>
+        <label>Choose Book:</label>
+        <select>
+            <optgroup label="PHP">
+                <option>v5.0</option>
+                <option>v7.0</option>
+                <option>v8.0</option>
+            </optgroup>
+            <optgroup label="Python">
+                <option>v2.0</option>
+                <option>v3.0</option>
+                <option>v3.9</option>
+            </optgroup>
+        </select> <br>
+        <textarea placeholder="Write here why you want to learn in programming"cols="50" rows="10" ></textarea> <br>
+        <input type="reset" value="Empty">
+        <input type="submit" value="Send">
+        
+        
+    </form>
+</body>
+</html>

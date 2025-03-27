@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List Guide</title>
+</head>
+<body onload="userName()">
+    <div class="container" id="all">
+        <h3>Welcome, <span id="uName"></span> To your Smart Shopping List Guide.</h3>
+        <form>
+            <label for="product">Product:</label><br> <br>
+            <input type="text" placeholder="Enter your Product Name" required id="product"> <br><br><br>
+            <label for="quatity">Quantity:</label><br> <br>
+            <input type="text" placeholder="Enter your quantity" required id="quantity"> <br> <br> <br>
+            <label for="type">Type:</label> <br><br>
+            <select id="type">
+                <optgroup label="Food & Groceries">
+                    <option value="">Fruits🍎</option>
+                    <option value="">Vegetables🥕</option>
+                    <option value="">Dairy Products🥛</option>
+                    <option value="">Meat & Poultry🍗</option>
+                    <option value="">Seafood🐟</option>
+                    <option value="">Bakery Items🍞</option>
+                    <option value="">Beverages☕</option>
+                    <option value="">Snacks🍪</option>
+                    <option value="">Spices & Condiments🌶️</option>
+                </optgroup>
+                <optgroup label="Household Essentials">
+                    <option value="">Cleaning Supplies🧽</option>
+                    <option value="">Paper Towels & Napkins🧻</option>
+                    <option value="">Dishwashing Liquid🍽️</option>
+                    <option value="">Trash Bags 🚮</option>
+                    <option value="">Light Bulbs💡</option>
+                    <option value="">Batteries🔋</option>
+                </optgroup>
+                <optgroup label=" Personal Care & Hygiene">
+                    <option value="">Shampoo & Conditioner 🚿</option>
+                    <option value="">Soap & Body Wash🛁</option>
+                    <option value="">Toothpaste & Toothbrush🦷</option>
+                    <option value="">Deodorant🧴</option>
+                    <option value="">Skincare & Makeup💄</option>
+                    <option value="">First Aid & Medicines💊</option>
+                </optgroup>
+                <optgroup label=" Baby & Kids Essentials">
+                    <option value="">Diapers 🍼</option>
+                    <option value="">Baby Food 🍲</option>
+                    <option value="">Toys🧸</option>
+                    <option value="">Baby Wipes 👶 </option>
+                </optgroup>
+                <optgroup label="Electronics & Accessories">
+                    <option value="">Phone Chargers 🔌</option>
+                    <option value="">Headphones 🎧</option>
+                    <option value="">Power Banks ⚡</option>
+                    <option value="">Cables & Adapters 🔄 </option>
+                </optgroup>
+                <optgroup label="Clothing & Accessories">
+                    <option value="">Shirts & Pants 👕</option>
+                    <option value="">Shoes 👟</option>
+                    <option value="">Jackets 🧥</option>
+                    <option value="">Socks 🧦</option>
+                    <option value="">Hats & Gloves 🧤</option>
+                </optgroup>
+                <optgroup label="Office & Stationery">
+                    <option value="">Notebooks 📓</option>
+                    <option value="">Pens & Pencils ✏️</option>
+                    <option value="">Sticky Notes 📌</option>
+                    <option value="">Printer Ink 🖨️</option>
+                    <option value="">Envelopes ✉️</option>
+                </optgroup>
+                <option value="other" id="other">Other</option>
+            </select> <br> <br> <br>
+            <input type="button" value="Add" class="btn">
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        /* Simple javaScript code*/
+        function userName() {
+            userNameV = prompt("Enter your username:");
+            document.getElementById("uName").textContent = userNameV;
+        }
+        /* Start With vueJs */
+        const {createApp} = Vue;
+        createApp({}).mount("#all")
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            background-color:#F5F5F5 ;
+            width: 500px;
+            padding: 10px;
+            margin-left: 30%;
+            text-align: center;
+        }
+        .container h3 {
+            color:#4CAF50 ;
+        }
+        .container h3 span {
+            color:#FF9800 ;
+        }
+        .container form label {
+            font-weight: bold;
+            color: #333333;
+            text-align: left;
+        }
+        .container form input , .container form  select{
+            width: 300px;
+            height: 30px;
+            outline: none;
+            background-color: #FFFFFF;
+            border: 1.2px solid #4CAF50;
+            color: #333333;
+            padding-left: 5px;
+        }
+        .container form input::placeholder {
+            color:#9E9E9E ;
+        }
+        #other {
+            font-weight: 600;
+        }
+        .container form .btn {
+            background: #FF9800; 
+            color: #FFFFFF; 
+            border: none;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container form .btn:hover {
+            background-color: #E68900; 
+}
+
+    </style>
+</body>
+</html>
